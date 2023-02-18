@@ -187,10 +187,9 @@ def problem2and3():
     value = 7.3
     matrix = divided_difference_table(x_points, y_points)
 
-    poly_approx : np.array = np.zeros(3)
-    poly_approx[0] = matrix[1][1]
-    poly_approx[1] = matrix[2][2]
-    poly_approx[2] = matrix[3][3]
+    poly_approx = []
+    for x in range(1, len(matrix)):
+        poly_approx.append(matrix[x][x])
 
     # print(matrix)
     print(poly_approx)
@@ -230,6 +229,4 @@ if __name__ == "__main__":
     problem4()
     print()
     problem5()
-
-    
-
+    print()
